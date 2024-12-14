@@ -54,6 +54,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
             Elements.autherr.style.color = "white";
             Elements.autherr.textContent = "Logged in successfully!";
+
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
         } else {
             Elements.autherr.textContent = data.error;
         }

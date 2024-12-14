@@ -1,0 +1,90 @@
+main {
+    display: none;
+    height: 100vh;
+    flex-direction: row;
+}
+
+nav {
+    height: calc(100vh - 10px);
+    width: fit-content;
+    max-width: 20vw;
+    padding: 5px;
+
+    background-color: #171717;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+nav > button {
+    all: unset;
+    cursor: pointer;
+
+    height: 15px;
+    width: calc(15vw + 10px);
+    border-radius: 20px;
+    padding: 5px;
+
+    background-color: rgb(90, 90, 90);
+    color: white;
+
+    text-align: center;
+}
+
+#messages {
+    width: 80vw;
+    height: calc(95vh - 10px);
+
+    display: flex;
+    flex-direction: row;
+}
+
+#mymessages {
+    width: 50%;
+    height: 95vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#othermessages {
+    width: 50%;
+    height: 95h;
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message {
+    width: calc(75% - 10px);
+    height: fit-content;
+    border-radius: 20px;
+    color: white;
+    padding: 5px;
+}
+
+#othermessages > .message {
+    background-color: rgb(90, 90, 90);
+}
+
+#mymessages > .message {
+    background-color: rgb(58, 56, 184);
+}
+
+#sendbar {
+    height: 5vh;
+    width: 80vw;
+    display: flex;
+}
+
+#sendinput {
+    width: calc(75vw - 10px);
+    height: calc(5vh - 10px);
+    padding: 5px;
+}
+
+#sendbut {
+    width: 5vw;
+}

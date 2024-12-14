@@ -24,6 +24,9 @@ const Elements = {
     signupbtn: getElementById('signup-btn'),
     signuperr: getElementById('signuperr'),
     backtostartauthfromsignup: getElementById('backtostartauthfromsignup'),
+
+
+    main: getElementById('main'),
 };
 
 export default Elements;
