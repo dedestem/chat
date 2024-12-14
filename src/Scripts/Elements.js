@@ -27,6 +27,13 @@ const Elements = {
 
 
     main: getElementById('main'),
+    nav: getElementById('nav'),
+    messages: getElementById('messages'),
+    mymessages: getElementById('mymessages'),
+    othermessages: getElementById('othermessages'),
+    sendbar: getElementById('sendbar'),
+    sendinput: getElementById('sendinput'),
+    sendbut: getElementById('sendbut'),
 };
 
 export default Elements;
