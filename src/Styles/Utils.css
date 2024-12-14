@@ -1,0 +1,27 @@
+.centerx {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.centery {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.centerxy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.centertext {
+    text-align: center;
+}

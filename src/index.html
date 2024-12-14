@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats</title>
+
+    <link rel="stylesheet" href="Styles/Main.css"/>
+    <link rel="stylesheet" href="Styles/Utils.css"/>
+    <link rel="stylesheet" href="Styles/Text.css"/>
+    <link rel="stylesheet" href="Styles/Loader.css"/>
+
+    <link rel="stylesheet" href="Styles/Pages/Start.css"/>
+    <link rel="stylesheet" href="Styles/Pages/Authentication.css"/>
+
+    <script src="Scripts/Libaries/qrcode.js"></script>
+
+    <script type="module" src="Scripts/Main.js" defer></script>
+  </head>
+
+  <body>
+    <div id="start" class="centerxy">
+      <h1>Chats</h1>
+      <span class="loader"></span>
+    </div>
+    <div id="authentication" class="centerxy">
+      <h1 class="centertext">Authentication</h1>
+      <br>
+      <input id="username" placeholder="Username">
+      <br>
+      <input id="authcode" placeholder="Authcode">
+      <br>
+      <br>
+      <button id="signin">Sign in</button>
+      <br>
+      <p id="autherr">Invalid username or password!</p>
+      <canvas id="authqr"></canvas>
+    </div>
+  </body>
+</html>
