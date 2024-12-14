@@ -12,16 +12,15 @@ const Elements = {
 
 
     auth: getElementById('authentication'),
-    authqr: getElementById('username'),
-    usernamesp: getElementById('authcode'),
-    authcodesp: getElementById('signin'),
+    username: getElementById('username'),
+    authcode: getElementById('authcode'),
+    signinbtn: getElementById('signin'),
     autherr: getElementById('autherr'),
     backtostartauthfromsignin: getElementById('backtostartauthfromsignin'),
 
     signup: getElementById('signup'),
     authqr: getElementById('authqr'),
     usernamesp: getElementById('usernamesp'),
-    authcodesp: getElementById('authcodesp'),
     signupbtn: getElementById('signup-btn'),
     signuperr: getElementById('signuperr'),
     backtostartauthfromsignup: getElementById('backtostartauthfromsignup'),

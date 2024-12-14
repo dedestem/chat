@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chats</title>
 
+
     <link rel="stylesheet" href="Styles/Main.css"/>
     <link rel="stylesheet" href="Styles/Utils.css"/>
     <link rel="stylesheet" href="Styles/Text.css"/>
@@ -15,10 +16,11 @@
     <link rel="stylesheet" href="Styles/Pages/Authentication.css"/>
     <link rel="stylesheet" href="Styles/Pages/Signup.css"/>
 
-    <script src="Scripts/Libaries/qrcode.js"></script>
 
-    <script type="module" src="Scripts/Main.js" defer></script>
-    <script type="module" src="Scripts/ButtonLinks.js" defer></script>
+    <script type="module" src="Scripts/Main.js"></script>
+    <script type="module" src="Scripts/ButtonLinks.js"></script>
+
+    <script type="module" src="Scripts/Pages/Auth.js"></script>
   </head>
 
   <body>
@@ -51,13 +53,11 @@
       <br>
       <input id="usernamesp" placeholder="Username">
       <br>
-      <input id="authcodesp" placeholder="Authcode">
-      <br>
       <br>
       <button id="signup-btn">Sign up</button>
       <br>
       <p id="signuperr">Username already in use!</p>
-      <canvas id="authqr"></canvas>
+      <img id="authqr">
       <a id="backtostartauthfromsignup" href="#">Back</a>
     </div>
   </body>
