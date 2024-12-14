@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
     Elements.backtostartauthfromsignin.addEventListener('click', function() {
         Elements.auth.style.display = "none";
         Elements.startauth.style.display = "flex";
+        location.reload();
     });
 
     Elements.startsignup.addEventListener('click', function() {
@@ -19,5 +20,6 @@ window.addEventListener("DOMContentLoaded", () => {
     Elements.backtostartauthfromsignup.addEventListener('click', function() {
         Elements.signup.style.display = "none";
         Elements.startauth.style.display = "flex";
+        location.reload();
     });
 });

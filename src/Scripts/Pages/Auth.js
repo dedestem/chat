@@ -5,22 +5,28 @@ window.addEventListener("DOMContentLoaded", () => {
         const username = Elements.usernamesp.value; // Changed 'Username' to 'username' (lowercase)
 
         if (!username) {
-            alert('Please enter a valid username');
+            Elements.signuperr.textContent = "Invalid username"
             return;
         }
 
         const response = await fetch('https://chat.davidnet.net/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username }) // Changed to 'username' (lowercase)
+            body: JSON.stringify({ username }) //! NEEDS TO BE LOWERCASE username ELSE Nodejs = ):
         });
 
         const data = await response.json();
         if (data.qrCodeUrl) {
             Elements.authqr.src = data.qrCodeUrl;
             Elements.authqr.style.display = "block";
+            Elements.signupbtn.style.display = "none";
+            Elements.signuperr.style.color = "white";
+            Elements.signuperr.textContent = `Scan the QR code with an authencator!
+            
+            After you can go Back and login!
+            `
         } else {
-            alert('Error: ' + data.error);
+            Elements.signuperr.textContent = data.error;
         }
     });
 });
@@ -31,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const token = Elements.authcode.value;
 
         if (!username || !token) {
-            alert('Please enter both username and token');
+            Elements.autherr.textContent = "Invalid credentials!"
             return;
         }
 
@@ -45,9 +51,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const data = await response.json();
         if (data.message === 'Login successful') {
-            alert('Logged in successfully');
+            Elements.autherr.style.color = "white";
+            Elements.autherr.textContent = "Logged in succesfully!"
         } else {
-            alert('Error: ' + data.error);
+            Elements.autherr.textContent = data.error;
         }
     });
 });
