@@ -2,40 +2,52 @@ import Elements from '../Elements.js';
 
 window.addEventListener("DOMContentLoaded", () => {
     Elements.signupbtn.addEventListener('click', async function () {
-        const Username = Elements.usernamesp.value;
+        const username = Elements.usernamesp.value; // Changed 'Username' to 'username' (lowercase)
 
-        const Response = await fetch('https://chat.davidnet.net/signup', {
+        if (!username) {
+            alert('Please enter a valid username');
+            return;
+        }
+
+        const response = await fetch('https://chat.davidnet.net/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ Username })
+            body: JSON.stringify({ username }) // Changed to 'username' (lowercase)
         });
 
-        const Data = await Response.json();
-        if (Data.qrCodeUrl) {
-            Elements.authqr.src = Data.qrCodeUrl;
+        const data = await response.json();
+        if (data.qrCodeUrl) {
+            Elements.authqr.src = data.qrCodeUrl;
             Elements.authqr.style.display = "block";
         } else {
-            alert('Error: ' + Data.error);
+            alert('Error: ' + data.error);
         }
     });
 });
 
 window.addEventListener("DOMContentLoaded", () => {
     Elements.signinbtn.addEventListener('click', async function () {
-        const Username = Elements.username.value;
-        const Token = Elements.authcode.value;
+        const username = Elements.username.value; // Changed to lowercase 'username'
+        const token = Elements.authcode.value;
 
-        const Response = await fetch('https://chat.davidnet.net/lgoin', {
+        if (!username || !token) {
+            alert('Please enter both username and token');
+            return;
+        }
+
+        const response = await fetch('https://chat.davidnet.net/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ Username, Token })
+            body: JSON.stringify({ username, token }) // Sending correct payload
         });
 
-        const Data = await Response.json();
-        if (Data.message === 'Login successful') {
+        console.log(response); // Debugging log to check the response status
+
+        const data = await response.json();
+        if (data.message === 'Login successful') {
             alert('Logged in successfully');
         } else {
-            alert('Error: ' + Data.error);
+            alert('Error: ' + data.error);
         }
     });
 });
