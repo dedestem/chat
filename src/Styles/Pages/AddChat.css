@@ -1,0 +1,44 @@
+#addchat {
+    height: 100vh;
+    display: none;
+}
+
+#addchat > input {
+    all: unset;
+    
+    height: 15px;
+    width: 200px;
+    border-radius: 20px;
+    padding: 15px;
+
+    background-color: rgb(90, 90, 90);
+    color: white;
+}
+
+#addchat > input:hover, #addchat > #newchat-btn:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+#addchat > #newchat-btn {
+    all: unset;
+    cursor: pointer;
+
+    height: 15px;
+    width: 100px;
+    border-radius: 20px;
+    padding: 15px;
+
+    background-color: rgb(90, 90, 90);
+    color: white;
+
+    text-align: center;
+}
+
+#addchat > input:active, #addchat > #newchat-btn:active {
+    background-color: rgb(70, 69, 69);
+}
+
+#newchatstatus {
+    font-weight: bold;
+    color: red;
+}

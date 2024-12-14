@@ -16,9 +16,11 @@
     <link rel="stylesheet" href="Styles/Pages/Authentication.css"/>
     <link rel="stylesheet" href="Styles/Pages/Signup.css"/>
     <link rel="stylesheet" href="Styles/Pages/Main.css"/>
+    <link rel="stylesheet" href="Styles/Pages/AddChat.css"/>
 
 
     <script type="module" src="Scripts/Main.js"></script>
+    <script type="module" src="Scripts/Pages/Chats.js"></script>
     <script type="module" src="Scripts/ButtonLinks.js"></script>
 
     <script type="module" src="Scripts/Pages/Auth.js"></script>
@@ -66,8 +68,7 @@
     </div>
     <main id="main">
       <nav id="nav">
-        <button>Jacob</button>
-        <button>David</button>
+        <button id="gotoaddchat">+</button>
       </nav>
       <div>
         <div id="messages">
@@ -88,5 +89,16 @@
         </div>
       </div>
     </main>
+    <div id="addchat" class="centerxy">
+      <h1 class="centertext">Add chat</h1>
+      <br>
+      <input id="newchatusername" placeholder="Username">
+      <br>
+      <br>
+      <button id="newchat-btn">Add chat</button>
+      <br>
+      <p id="newchatstatus"></p>
+      <a id="backtostartauthfromaddchat" href="index.html">Back</a>
+    </div>
   </body>
 </html>

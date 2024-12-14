@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Check if the user is online
     if (isOnline) {
-        setTimeout(handleOnlineStatus, 2000);
+        setTimeout(handleOnlineStatus, 1000);
     } else {
         handleOfflineStatus();
     }

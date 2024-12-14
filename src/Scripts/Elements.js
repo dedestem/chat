@@ -34,6 +34,13 @@ const Elements = {
     sendbar: getElementById('sendbar'),
     sendinput: getElementById('sendinput'),
     sendbut: getElementById('sendbut'),
+    gotoaddchat: getElementById('gotoaddchat'),
+
+    addchat: getElementById('addchat'),
+    newchatusername: getElementById('newchatusername'),
+    newchatbtn: getElementById('newchat-btn'),
+    newchatstatus: getElementById('newchatstatus'),
+    backtostartauthfromaddchat: getElementById('backtostartauthfromaddchat'),
 };
 
 export default Elements;

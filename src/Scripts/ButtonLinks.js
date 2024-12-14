@@ -7,8 +7,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     Elements.backtostartauthfromsignin.addEventListener('click', function() {
-        Elements.auth.style.display = "none";
-        Elements.startauth.style.display = "flex";
         location.reload();
     });
 
@@ -18,8 +16,15 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     Elements.backtostartauthfromsignup.addEventListener('click', function() {
-        Elements.signup.style.display = "none";
-        Elements.startauth.style.display = "flex";
         location.reload();
+    });
+
+    Elements.backtostartauthfromaddchat.addEventListener('click', function() {
+        location.reload();
+    });
+
+    Elements.gotoaddchat.addEventListener('click', function() {
+        Elements.main.style.display = "none";
+        Elements.addchat.style.display = "flex";
     });
 });
