@@ -21,10 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
             Elements.authqr.style.display = "block";
             Elements.signupbtn.style.display = "none";
             Elements.signuperr.style.color = "white";
-            Elements.signuperr.textContent = `Scan the QR code with an authencator!
-            
-            After you can go Back and login!
-            `
+            Elements.signuperr.textContent = "Scan the QR code with an authencator! After you can go Back and login!"
         } else {
             Elements.signuperr.textContent = data.error;
         }
