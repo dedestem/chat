@@ -1,4 +1,4 @@
-import Elements from './Elements.js';
+import Elements from '../Elements.js';
 
 window.addEventListener("DOMContentLoaded", () => {
     Elements.signupbtn.addEventListener('click', async function () {
