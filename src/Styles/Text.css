@@ -6,3 +6,7 @@ h1 {
 h2 {
     color: hsl(0, 0%, 100%);
 }
+
+p {
+    color: white;
+}

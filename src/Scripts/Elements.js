@@ -4,7 +4,7 @@ const getElementById = (id) => {
 
 const Elements = {
     start: getElementById('start'),
-
+    loaderr: getElementById('loaderr'),
 
     startauth: getElementById('startauth'),
     startsignin: getElementById('startsignin'),
