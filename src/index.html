@@ -11,17 +11,27 @@
     <link rel="stylesheet" href="Styles/Loader.css"/>
 
     <link rel="stylesheet" href="Styles/Pages/Start.css"/>
+    <link rel="stylesheet" href="Styles/Pages/Startauth.css"/>
     <link rel="stylesheet" href="Styles/Pages/Authentication.css"/>
+    <link rel="stylesheet" href="Styles/Pages/Signup.css"/>
 
     <script src="Scripts/Libaries/qrcode.js"></script>
 
     <script type="module" src="Scripts/Main.js" defer></script>
+    <script type="module" src="Scripts/ButtonLinks.js" defer></script>
   </head>
 
   <body>
     <div id="start" class="centerxy">
       <h1>Chats</h1>
       <span class="loader"></span>
+    </div>
+    <div id="startauth" class="centerxy">
+      <h2 style="padding-bottom: 30px;">Authentication Required!</h2>
+      <div style="flex-direction: row; gap: 20px;">
+        <button id="startsignin">Sign in</button>
+        <button id="startsignup">Sign up</button>
+      </div>
     </div>
     <div id="authentication" class="centerxy">
       <h1 class="centertext">Authentication</h1>
@@ -34,7 +44,21 @@
       <button id="signin">Sign in</button>
       <br>
       <p id="autherr">Invalid username or password!</p>
+      <a id="backtostartauthfromsignin" href="#">Back</a>
+    </div>
+    <div id="signup" class="centerxy">
+      <h1 class="centertext">Sign Up</h1>
+      <br>
+      <input id="usernamesp" placeholder="Username">
+      <br>
+      <input id="authcodesp" placeholder="Authcode">
+      <br>
+      <br>
+      <button id="signup-btn">Sign up</button>
+      <br>
+      <p id="signuperr">Username already in use!</p>
       <canvas id="authqr"></canvas>
+      <a id="backtostartauthfromsignup" href="#">Back</a>
     </div>
   </body>
 </html>

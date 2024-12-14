@@ -1,9 +1,14 @@
-#authentication {
+#signup {
     height: 100vh;
     display: none;
 }
 
-#authentication > input {
+#authqr {
+    border-radius: 20px;
+    display: none;
+}
+
+#signup > input {
     all: unset;
     
     height: 15px;
@@ -15,11 +20,11 @@
     color: white;
 }
 
-#authentication > input:hover, #authentication > #signin:hover {
+#signup > input:hover, #signup > #signup-btn:hover {
     background-color: rgb(100, 100, 100);
 }
 
-#authentication > #signin {
+#signup > #signup-btn {
     all: unset;
     cursor: pointer;
 
@@ -34,11 +39,11 @@
     text-align: center;
 }
 
-#authentication > input:active, #authentication > #signin:active {
+#signup > input:active, #signup > #signup-btn:active {
     background-color: rgb(70, 69, 69);
 }
 
-#autherr {
+#signuperr {
     font-weight: bold;
     color: red;
     display: none;

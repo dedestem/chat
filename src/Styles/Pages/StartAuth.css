@@ -1,0 +1,27 @@
+#startauth {
+    height: 100vh;
+    display: none;
+}
+
+#startauth > div > button:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+#startauth > div > button {
+    all: unset;
+    cursor: pointer;
+
+    height: 15px;
+    width: 100px;
+    border-radius: 20px;
+    padding: 15px;
+
+    background-color: rgb(90, 90, 90);
+    color: white;
+
+    text-align: center;
+}
+
+#startauth > div > button:active {
+    background-color: rgb(70, 69, 69);
+}
